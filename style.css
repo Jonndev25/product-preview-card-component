@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+--Dark-cyan: hsl(158, 36%, 37%);
+--button-hover: hsl(158, 36%, 20%);
+--Cream: hsl(30, 38%, 92%);
+
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Montserrat Fraunces', sans-serif;
+    background: var(--Cream);
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    max-width: 340px;
+    overflow: hidden;
+    border-radius: .5em;
+    background: var(--White);
+    margin: 2em 1em 0em 1em;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+}
+
+.image img:last-child {
+    display: none;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.contents {
+    padding: 2em 1.5em;
+}
+
+.contents h1 {
+    font-size: 1em;
+    margin-bottom: .5em;
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.contents h2 {
+    font-size: 2rem;
+    font-family: Fraunces;
+    font-weight: 700;
+    color: var(--Very-dark-blue);
+    margin-bottom: .6em;
+    line-height: 1em;
+}
+
+.contents p {
+    color: var(--Dark-grayish-blue);
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 2em;
+}
+
+.contents .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2em;
+}
+
+.price .new-price {
+    color: var(--Dark-cyan);
+    font-family: Fraunces;
+    font-size: 2rem;
+    margin-right: .6em;
+}
+
+.price .old-price {
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    text-decoration: line-through;
+    font-size: .8rem;
+}
+
+.contents button {
+    width: 100%;
+    border: none;
+    padding: 1.1em 0;
+    border-radius: .5em;
+    background: var(--Dark-cyan);
+    color: var(--White);
+    font-weight: 700;
+    font-family: Montserrat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contents button:hover {
+    cursor: pointer;
+    background: var(--button-hover);
+}
+
+.contents button img {
+    margin-right: 1em;
+}
+
+
+/*Larger Screen*/
+@media screen and (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+        width: 600px;
+    } 
+
+    .image {
+        width: 100%;
+    }
+    
+    .image img:first-child {
+        display: none;
+    }
+
+    .image img:last-child {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .contents {
+        padding: 2.2em;
+        width: 100%;
+    }
+
+    .contents h1 {
+        margin-bottom: 1.5em;
+    }
+
+    .contents h2 {
+        margin-bottom: .85em;
+    }
+    
+    .contents .price {
+        margin-bottom: 2.1em;
+    }
+}
