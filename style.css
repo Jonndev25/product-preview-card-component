@@ -32,7 +32,7 @@ body {
     overflow: hidden;
     border-radius: .5em;
     background: var(--White);
-    margin: 2em 1em 0em 1em;
+    margin: 2em 1em;
 }
 
 .image {
